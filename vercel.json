@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/index.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 10,
+      "memory": 1024
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/(.*)",
@@ -63,11 +63,5 @@
   "env": {
     "JWT_SECRET": "@jwt_secret",
     "MONGODB_URI": "@mongodb_uri"
-  },
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 10,
-      "memory": 1024
-    }
   }
 }
