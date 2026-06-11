@@ -41,27 +41,6 @@
           "value": "Content-Type, Authorization, Cookie"
         }
       ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
     }
-  ],
-  "env": {
-    "JWT_SECRET": "@jwt_secret",
-    "MONGODB_URI": "@mongodb_uri"
-  }
+  ]
 }
